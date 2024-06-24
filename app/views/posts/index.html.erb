@@ -1,0 +1,23 @@
+<div class="w-full max-w-4xl mx-auto p-4">
+  <% if notice.present? %>
+    <p class="py-2 px-3 bg-green-50 mb-5 text-green-500 font-medium rounded-lg inline-block" id="notice"><%= notice %></p>
+  <% end %>
+
+  <% content_for :title, "Posts" %>
+
+  <div class="flex justify-between items-center mb-6">
+    <h1 class="font-bold text-4xl text-gray-800">Posts</h1>
+    <%= link_to "New post", new_post_path, class: "rounded-lg py-2 px-4 bg-blue-600 text-white font-medium hover:bg-blue-700 transition-colors duration-300" %>
+  </div>
+
+  <div id="posts" class="space-y-6">
+    <% @posts.each do |post| %>
+      <div class="bg-white shadow-md rounded-lg p-6">
+        <%= render post %>
+        <div class="mt-4">
+          <%= link_to "Show this post", post, class: "rounded-lg py-2 px-4 bg-gray-100 inline-block font-medium hover:bg-gray-200 transition-colors duration-300" %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
