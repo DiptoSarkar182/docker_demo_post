@@ -1,7 +1,7 @@
 # Docker Deployment on Render
 
-This is a simple project about Post CRUD which demonstrates the process of deploying an application using Docker on 
-Render. Throughout this project, I've explored and implemented various Docker-related practices, including creating 
+This is a simple project about Post CRUD which is deployed on render by using docker. Throughout this project, 
+I've explored and implemented various Docker-related practices, including creating 
 Dockerfiles, building Docker images, and pushing them to Docker Hub.
 
 
